@@ -8,7 +8,7 @@
 body {
     font-family:arial;
     font-size: 18px;
-    background-color: rgba(255, 208, 0, 0.836);
+    background-color: rgba(113, 191, 255, 0.836);
     height: 100hv;
     display: flex;
     flex-direction:column;
@@ -24,7 +24,6 @@ section {
     align-items: center;
     gap: 50px;
     width: 100%;
-    height: 100vh;
 }
 
 /* Секція про вебдизайн - вітальна з відео */
@@ -56,7 +55,12 @@ section {
     font-size: 120px;
 }
 
+.about {
+    height: 100vh;
+}
+
 .container {
+    text-align: justify;
     background-color: rgb(248, 166, 166);
     padding: 5px;
     width: 300px;
@@ -84,12 +88,13 @@ h2 {
 }
 /* Секція пояснення тегів */
 .tags {
+    background-color: #69f781;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap:15px;
     width:100%;
-    height: 100vh;
+
 }
 
 .tag-container {
@@ -109,7 +114,7 @@ h2 {
     width:100px;
     line-height:100px;
     height:100px;
-    border:#330022 solid 2px;
+    border:#53262c solid 2px;
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
@@ -132,4 +137,185 @@ h2 {
 .tag-description {
     display: none;
     text-align: left;
+}
+
+/* Основні стилі для футера */
+.main-footer {
+    background-color: #f0f0f0; /* Світло-сірий фон верхньої частини */
+    color: #333;
+    font-family: Arial, sans-serif; /* Використовуйте ваш основний шрифт */
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє колонкам переноситися на новий рядок на менших екранах */
+    justify-content: space-between;
+    max-width: 1200px; /* Максимальна ширина вмісту футера */
+    margin: 0 auto;
+    padding: 40px 20px; /* Відступи зверху/знизу та з боків */
+}
+
+.footer-column {
+    flex: 1; /* Кожна колонка займає рівну частку простору */
+    min-width: 280px; /* Мінімальна ширина колонки, щоб уникнути занадто сильного стиснення */
+    margin-bottom: 20px; /* Відступ між колонками на мобільних */
+    padding: 0 15px; /* Внутрішні відступи колонок */
+}
+
+.footer-column h3 {
+    color: #000; /* Чорний колір для заголовків */
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Стилі для колонки з інформацією */
+.footer-info .footer-logo img {
+    max-width: 200px; /* Максимальна ширина логотипу */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px; /* Відстань між іконками */
+    margin-top: 15px;
+}
+
+.social-icon img {
+    width: 32px; /* Розмір іконок соцмереж */
+    height: 32px;
+    border-radius: 50%; /* Для круглих іконок, якщо потрібно */
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icon img:hover {
+    transform: translateY(-3px); /* Ефект при наведенні */
+}
+
+/* Стилі для корисної інформації (списку) */
+.footer-useful-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-useful-info li {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Стилі для форми підписки */
+.newsletter-form {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden; /* Щоб рамка не виходила за межі */
+    margin-top: 15px;
+}
+
+.newsletter-form input[type="email"] {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+}
+
+.newsletter-form input[type="email"]::placeholder {
+    color: #aaa;
+}
+
+.subscribe-button {
+    background-color: #6a1b9a; /* Фіолетовий колір кнопки */
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #4a0f6a; /* Темніший фіолетовий при наведенні */
+}
+
+.subscribe-button img {
+    width: 24px; /* Розмір іконки в кнопці */
+    height: 24px;
+    filter: invert(100%); /* Щоб іконка була білою */
+}
+
+/* Нижня частина футера */
+.footer-bottom {
+    background-color: #3f4864; /* Темно-синій фон */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.85em;
+    display: flex;
+    flex-direction: column; /* За замовчуванням стовпцем на мобільних */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom-social {
+    margin-top: 10px; /* Відступ на мобільних */
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon-sm img {
+    width: 20px; /* Розмір іконок у нижній частині */
+    height: 20px;
+    filter: invert(100%); /* Щоб іконки були білими */
+    transition: transform 0.2s ease-in-out;
+}
+
+.social-icon-sm img:hover {
+    transform: translateY(-2px);
+}
+
+/* Медіа-запити для адаптивності */
+@media (max-width: 768px) {
+    .footer-column {
+        flex: 1 1 100%; /* Кожна колонка займає 100% ширини на малих екранах */
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .footer-info .footer-logo,
+    .social-icons,
+    .newsletter-form {
+        justify-content: center; /* Центруємо елементи */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer-column {
+        min-width: 300px; /* Трохи більша мінімальна ширина для середніх екранів */
+    }
 }
