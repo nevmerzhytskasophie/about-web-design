@@ -2,10 +2,58 @@
     <head>
     <title>Невмержицька про веб дезайн</title>
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .visual-functions {
+        background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+        padding: 60px 0;
+      }
+      .visual-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      .visual-functions h2 {
+        text-align: center;
+        font-size: 2.5em;
+        margin-bottom: 40px;
+        color: #2a3d66;
+      }
+      .visual-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
+      .visual-item {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(44, 62, 80, 0.08);
+        padding: 30px 20px;
+        max-width: 220px;
+        text-align: center;
+        transition: transform 0.2s;
+      }
+      .visual-item:hover {
+        transform: translateY(-8px) scale(1.04);
+      }
+      .visual-item img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 16px;
+      }
+      .visual-item h3 {
+        margin-bottom: 12px;
+        color: #2a3d66;
+      }
+      .visual-item p {
+        color: #444;
+        font-size: 1em;
+      }
+    </style>
     </head>
 
 
-    <section class="welcome">
+    <section class="welcome" id="welcome">
         <video autoplay muted loop playsinline class="background-video">
             <source src="video/intro.mp4" type="video/mp4" />
             Your browser does not support the video tag.
@@ -14,7 +62,7 @@
     </section>
 
 
-        <section class="about">
+        <section class="about" id="about">
           <div class="container">
             <div class="image_container">
             <img src="img/html.png" alt="HTML">
@@ -63,7 +111,7 @@
       </div>
      </section>
 
-    <section class="tags">
+    <section class="tags" id="tags">
         <h2>Теги</h2>
         <div class="tag-container">
             <div class="tag-title">html</div>
@@ -105,7 +153,60 @@
             <div class="tag-title">a</div>
             <div class="tag-description">Посилання</div>
         </div>
+        <div class="tag-container">
+            <div class="tag-title">div</div>
+            <div class="tag-description">Блочний контейнер для контенту</div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-title">span</div>
+            <div class="tag-description">Вбудований контейнер для тексту</div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-title">form</div>
+            <div class="tag-description">Форма для введення даних користувача</div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-title">input</div>
+            <div class="tag-description">Поле для введення даних у форму</div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-title">button</div>
+            <div class="tag-description">Кнопка для взаємодії з формою</div>
+        </div>
     </section>
+
+<section class="visual-functions" id="visual-functions">
+  <div class="visual-container">
+    <h2>Візуальні функції вебдизайну</h2>
+    <div class="visual-grid">
+      <div class="visual-item">
+        <img src="img/colors.png" alt="Кольори">
+        <h3>Кольори</h3>
+        <p>Гармонійна палітра кольорів створює настрій, підкреслює важливі елементи та допомагає користувачу орієнтуватися на сторінці.</p>
+      </div>
+      <div class="visual-item">
+        <img src="img/fonts.png" alt="Шрифти">
+        <h3>Шрифти</h3>
+        <p>Вибір шрифтів впливає на читабельність та стиль сайту. Важливо використовувати контрастні та сучасні гарнітури.</p>
+      </div>
+      <div class="visual-item">
+        <img src="img/layout.png" alt="Верстка">
+        <h3>Верстка</h3>
+        <p>Зручне розташування блоків забезпечує логічну структуру та легкість сприйняття інформації.</p>
+      </div>
+      <div class="visual-item">
+        <img src="img/icons.png" alt="Іконки">
+        <h3>Іконки</h3>
+        <p>Іконки допомагають швидко знаходити потрібні функції та роблять інтерфейс більш зрозумілим.</p>
+      </div>
+      <div class="visual-item">
+        <img src="img/animation.png" alt="Анімація">
+        <h3>Анімація</h3>
+        <p>Анімації додають динаміки, акцентують увагу та покращують взаємодію з користувачем.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer class="main-footer">
     <div class="footer-top">
@@ -128,16 +229,6 @@
                 <li>Україна, м. Житомир, вул. Чуднівська, 103, 10005</li>
             </ul>
         </div>
-
-        <div class="footer-column footer-newsletter">
-            <h3>Підписатись на наші новини</h3>
-            <p>Для підписки на наші новини. Ви можете заповнити e-mail в спеціально відведене поле знизу</p>
-            <form action="#" method="post" class="newsletter-form">
-                <input type="email" placeholder="Введіть Ваш e-mail" required>
-                <button type="submit" class="subscribe-button">
-                    </button>
-            </form>
-        </div>
     </div>
 
     <div class="footer-bottom">
@@ -156,6 +247,21 @@
     <li><a href="#contacts">Контакти</a></li>
   </ul>
 </nav>
+
+<script>
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href.startsWith('#')) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+});
+</script>
 
     </body>
 </html>
